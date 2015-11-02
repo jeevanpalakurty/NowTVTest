@@ -1,0 +1,35 @@
+{
+  "description": "Iceberg",
+  "dependencies": {
+    "angular-animate": "^1.4.7",
+    "angular-route": "^1.4.7",
+    "express": "^4.13.3",
+    "jsonfile": "^2.2.3",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "chai": "^3.3.0",
+    "chai-http": "^1.0.0",
+    "jasmine": "^2.3.2",
+    "jasmine-core": "^2.3.4",
+    "jasmine-reporters": "2.0.6",
+    "jasmine-spec-reporter": "^2.2.3",
+    "karma-chrome-launcher": "^0.2.1",
+    "karma-jasmine": "^0.3.6",
+    "karma-mocha": "^0.2.0",
+    "karma-mocha-reporter": "^1.1.1",
+    "mocha": "^2.3.2",
+    "protractor": "^2.1.0",
+    "request": "^2.65.0",
+    "karma": "^0.13.9",
+    "karma-coverage": "^0.4.2",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "phantomjs": "^1.9.18"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "e2e": "protractor protractor.conf.js",
+    "unit": "karma start karma.conf.js",
+    "server-unit": "mocha test/server/**/*.spec.js"
+  }
+}
