@@ -2,11 +2,11 @@
 
 (function () {
 
-	var movieService = angular.module('moviesService', []);
+	var movieService = angular.module('iceberg-movies-service-module', ['iceberg-movies-constant-module']);
 
 	movieService.service('MoviesService', ['$http', 'MoviesReferenceURLs', function ($http, URLS, Movie) {
 
-		var _movies = {
+		var _moviesObj = {
 			movies: [],
 			totalItems: 0
 		};
@@ -20,21 +20,21 @@
 				}
 			}).then(function fetchSuccess(response) {
 
-				_movies.totalItems = response.data.totalItems;
+				_moviesObj.totalItems = response.data.totalItems;
 
-				_movies.movies = response.data.movies;
+				_moviesObj.movies = response.data.movies;
 
-				return _movies;
+				return _moviesObj;
 			});
 		}
 
-		function movies() {
-			return _movies;
+		function moviesData() {
+			return _moviesObj;
 		}
 
 		return {
 			getMovies: getMovies,
-			movies: movies
+			moviesData: moviesData
 		}
 	}]);
 

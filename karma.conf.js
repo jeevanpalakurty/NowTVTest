@@ -30,7 +30,7 @@ module.exports = function (config) {
 
 		// frameworks to use
 		frameworks: ['jasmine'],
-		browsers: ['PhantomJS'],
+		browsers: ['Chrome'],
 
 		customLaunchers: {
 			ChromeDesktop: {
@@ -49,7 +49,7 @@ module.exports = function (config) {
 
 		// Test results reporter to use
 		// possible values: 'dots', 'progress', 'mocha', 'junit', 'growl', 'coverage'
-		reporters: ['mocha'],
+		reporters: ['jasmine'],
 
 		// If browser does not capture in given timeout [ms], kill it
 		captureTimeout: 60000,

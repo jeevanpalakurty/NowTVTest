@@ -2,10 +2,10 @@
 
 (function () {
 
-	var app = angular.module('app', ['ngRoute', 'moviesController', 'angularUtils.directives.dirPagination']);
+	var icebergMovies= angular.module('iceberg-movies-module', ['ngRoute', 'iceberg-movies-controller-module', 'angularUtils.directives.dirPagination']);
 
 
-	app.config(['$routeProvider', function ($routeProvider) {
+	icebergMovies.config(['$routeProvider', function ($routeProvider) {
 		$routeProvider.
 			when('/movielist', {
 				templateUrl: 'partials/movieList.html',

@@ -1,7 +1,7 @@
 describe('http', function () {
 
-	beforeEach(module('app'));
-	beforeEach(module('moviesService'));
+	beforeEach(module('iceberg-movies-module'));
+	beforeEach(module('iceberg-movies-service-module'));
 
 	var moviesService;
 	var $httpBackend;
