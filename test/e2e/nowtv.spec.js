@@ -71,19 +71,28 @@ describe('can visit nowtv.com', function(){
           
            var searchParam = element.all(by.model('query.title'));
             searchParam.clear();
-            searchParam.sendKeys('Valley');
+            //entering two chars to see the filter fails.
+            searchParam.sendKeys('Va');
             
            var pageList = element.all(by.repeater('movie in getMovies().movies'));
             
+            expect(pageList.count()).toEqual(0);
+            
+            //enter at least 3 mtching chars to get the result
+            searchParam.clear();
+            searchParam.sendKeys('val');
+
             expect(pageList.count()).toEqual(1);
             
             var pageSize = element(by.model('pageSize'));
             pageSize.clear();
+            //get 160 movies at a time
             pageSize.sendKeys('160');
             
             searchParam.clear();
             searchParam.sendKeys('League1');
             
+            //expect pagelist i.e is number of items that should be displayed to be zero
             expect(pageList.count()).toEqual(0);
             
             searchParam.clear();

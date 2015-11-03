@@ -1,5 +1,7 @@
 'use strict';
+(function () {
+	angular.module('iceberg-movies-constant-module',[]).constant('MoviesReferenceURLs', {
+	   MOVIES: '/api/movies'
+	});
 
-angular.module('app').constant('MoviesReferenceURLs', {
-   MOVIES: '/api/movies'
-});
+})();	

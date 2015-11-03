@@ -4,9 +4,9 @@ describe('NowTV movies controller module', function () {
 	var scope,
 		mockMoviesService;
 
-	beforeEach(module('app'));
-	beforeEach(module('moviesController'));
-	beforeEach(module('moviesService'));
+	beforeEach(module('iceberg-movies-module'));
+	beforeEach(module('iceberg-movies-controller-module'));
+	beforeEach(module('iceberg-movies-service-module'));
 
 	beforeEach(module(function ($provide) {
 		var data = {
